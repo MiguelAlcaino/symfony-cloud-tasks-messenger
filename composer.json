@@ -1,0 +1,66 @@
+{
+    "name": "miguelalcaino/cloud-tasks-messenger",
+    "description": "Symfony Messenger transport backed by Google Cloud Tasks: push-based message handling for apps without long-running workers (e.g. Cloud Run).",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": [
+        "symfony",
+        "messenger",
+        "transport",
+        "google-cloud",
+        "cloud-tasks",
+        "cloud-run",
+        "queue"
+    ],
+    "authors": [
+        {
+            "name": "Miguel Alcaino",
+            "email": "miguel.alcaino@ogb.cl"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "google/auth": "^1.37",
+        "google/cloud-tasks": "^2.0",
+        "psr/cache": "^1.0 || ^2.0 || ^3.0",
+        "psr/clock": "^1.0",
+        "psr/log": "^1.1 || ^2.0 || ^3.0",
+        "symfony/clock": "^6.4 || ^7.0",
+        "symfony/config": "^6.4 || ^7.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/event-dispatcher": "^6.4 || ^7.0",
+        "symfony/framework-bundle": "^6.4 || ^7.0",
+        "symfony/http-foundation": "^6.4 || ^7.0",
+        "symfony/http-kernel": "^6.4 || ^7.0",
+        "symfony/messenger": "^6.4 || ^7.0",
+        "symfony/routing": "^6.4 || ^7.0",
+        "symfony/service-contracts": "^2.5 || ^3.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MiguelAlcaino\\CloudTasksMessenger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MiguelAlcaino\\CloudTasksMessenger\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse --memory-limit=1G",
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix"
+    }
+}
