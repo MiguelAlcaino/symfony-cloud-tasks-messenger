@@ -29,6 +29,9 @@ and routing stay as they are.
 - PHP 8.2+
 - Symfony 6.4 or 7.x (Messenger, FrameworkBundle)
 - `google/cloud-tasks` ^2 (installed as a dependency)
+- `ext-bcmath`: google/protobuf needs it to encode a task's schedule time and dispatch deadline
+- `phpseclib/phpseclib` ^3 (installed as a dependency): google/auth needs it to check the signature
+  of the OIDC token Cloud Tasks sends, and only suggests it
 
 ## Installation
 

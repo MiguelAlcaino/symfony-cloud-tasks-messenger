@@ -20,8 +20,10 @@
     ],
     "require": {
         "php": ">=8.2",
+        "ext-bcmath": "*",
         "google/auth": "^1.37",
         "google/cloud-tasks": "^2.0",
+        "phpseclib/phpseclib": "^3.0",
         "psr/cache": "^1.0 || ^2.0 || ^3.0",
         "psr/clock": "^1.0",
         "psr/log": "^1.1 || ^2.0 || ^3.0",
